@@ -75,7 +75,7 @@ export const getFeed = async (): Promise<Feed> => {
   });
 
   const fixed = json.map((post, index) => {
-    const id = (json.length - index).toString().padStart(4, '0');
+    const id = (json.length - index - 1).toString().padStart(4, '0');
     const url = `https://blog.0nu.be/content/${id}.html`;
 
     return {
