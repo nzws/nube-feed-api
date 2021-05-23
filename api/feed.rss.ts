@@ -7,5 +7,6 @@ export default async (
 ): Promise<void> => {
   const feed = await getFeed();
 
+  res.setHeader('Content-Type', 'application/rss+xml; charset=utf-8');
   res.send(feed.rss2());
 };

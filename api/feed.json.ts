@@ -7,5 +7,5 @@ export default async (
 ): Promise<void> => {
   const feed = await getFeed();
 
-  res.send(feed.json1());
+  res.json(JSON.parse(feed.json1()));
 };
