@@ -73,10 +73,6 @@ export const getFeed = async (): Promise<Feed> => {
     copyright:
       '本サイトに掲載された情報・データの無断転載及び商用利用はクレジットの記載を条件に全て許可しているよ。',
     updated: getDate(json[0].date),
-    feedLinks: {
-      json: 'https://nube-feed-api.vercel.app/api/feed.json',
-      atom: 'https://nube-feed-api.vercel.app/api/feed.atom'
-    },
     author
   });
 
