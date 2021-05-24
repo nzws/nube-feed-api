@@ -38,12 +38,26 @@ const getJson = async (): Promise<Content[]> => {
   const { body } = await got<Content[]>('https://blog.0nu.be/content.json', {
     responseType: 'json'
   });
-  body.unshift({
-    title: 'test',
-    description: 'test',
-    date: new Date().toISOString(),
-    category: []
-  });
+  body.unshift(
+    {
+      title: 'test',
+      description: 'test',
+      date: new Date().toISOString(),
+      category: []
+    },
+    {
+      title: 'test',
+      description: 'test',
+      date: new Date().toISOString(),
+      category: []
+    },
+    {
+      title: 'test',
+      description: 'test',
+      date: new Date().toISOString(),
+      category: []
+    }
+  );
   await cache.set(JSON.stringify(body));
 
   return body;
