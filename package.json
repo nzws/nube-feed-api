@@ -16,7 +16,7 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "@vercel/node": "^1.10.0",
+    "@vercel/node": "^1.11.0",
     "feed": "^4.2.2",
     "got": "^11.8.2",
     "unfurl.js": "^5.2.5"
